@@ -1,40 +1,54 @@
-# Exercise 1->  d7
-# Exercise 1 solution-> d8
+def add():
+    n1=int(input("Enter number1 ="))
+    n2=int(input("Enter number2 ="))
+    ans=n1+n2
+    print("Addition is =",ans)
 
-print("....Create calculator.... \n1.Addition \n2.Subtraction \n3.Multiplication \n4.Division")
-a=int(input("Enter 1st number = "))
-b=int(input("Enter 2nd number = "))
-c=int(input("Enter number for choice ="))
+def sub():
+    n1=int(input("Enter number1 ="))
+    n2=int(input("Enter number2 ="))
+    ans=n1-n2
+    print("Subtraction is =",ans)
 
-def cal(a,b,c):
+def mul():
+    n1=int(input("Enter number1 ="))
+    n2=int(input("Enter number2 ="))
+    ans=n1*n2
+    print("Multiplication is =",ans)
+
+def div():
+    n1=int(input("Enter number1 ="))
+    n2=int(input("Enter number2 ="))
+    if n2!=0:
+        ans=n1//n2
+        print("Division is =",ans)    
+    else:
+        print(" Error: Can't divide by zero")  
+
+def menu():
+    print("Menu")  
+    print("1. Addition")  
+    print("2. Subtraction")  
+    print("3. Multiplication") 
+    print("4. Division")  
+    print("5. Exit")  
+
+while(True):
+    menu()
+    c=int(input("Enter choice ="))
     if c==1:
-        return a+b
+        add()
     elif c==2:
-        return a-b
+        sub()
     elif c==3:
-        return a*b
+        mul()
     elif c==4:
-        return a//b
-sum=cal(a,b,c)
-sub=cal(a,b,c)
-mul=cal(a,b,c)
-div=cal(a,b,c)
-print(sum)
-print(sub)
-print(mul)
-print(div)
-
-
-
-
-# a=2
-# b=4
-# add=a+b
-# sub=a-b
-# mul=a*b
-# div=a/b
-# mod=a%b
-# sqr=a**b
-# print("\nADD",add,"\nSUB",sub,"\nMUL",mul,"\nDIV",div,"\nMOD",mod,"\nSQR",sqr)
-# print("The value of",a ,"//",3, "is=", a//b)
-
+        div()
+    elif c==5:
+        print("Done")
+        break
+    else:
+        print("Wrong input")
+        
+    
+    
