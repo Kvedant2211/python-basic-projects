@@ -1,3 +1,5 @@
+#prerequisite
+# pip install pywin32
 print("Welcome to Robo Speaker \n-Enter q for end")
 from win32com.client import Dispatch
 while True:
